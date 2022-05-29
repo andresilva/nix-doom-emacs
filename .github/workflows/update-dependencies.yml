@@ -2,7 +2,7 @@ name: "Update Dependencies"
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * FRI'
+    - cron: '0 */6 * * *'
 jobs:
   update-deps:
     name: Update dependencies
