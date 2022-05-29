@@ -7,6 +7,10 @@ git branch depupdate
 git checkout depupdate
 git reset --hard origin/master
 json="$(gh pr list --search "author:app/github-actions" --json headRefName,number)"
+if [[ $json == "[]" ]]; then
+    echo "No Dependency update PRs to merge"
+    exit
+fi
 echo "$json" | jq '.[] | .headRefName | @text' | xargs -L1 -- git pull origin --rebase
 if nix flake check; then
     echo "$json" | jq ".[] | .number | @text" | xargs -L1 -- gh pr merge --squash --delete-branch
