@@ -16,7 +16,7 @@ DRY_RUN = bool(env.get("GITHUB_DRY_RUN", False))
 
 INIT_EL = "test/doom.d/init.el"
 UPSTREAM_INIT_EL = "init.example.el"
-DOOM_UPSTREAM = "hlissner/doom-emacs"
+DOOM_UPSTREAM = "doomemacs/doomemacs"
 UPSTREAM_BRANCH = "develop"
 
 

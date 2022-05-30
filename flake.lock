@@ -5,15 +5,15 @@
       "locked": {
         "lastModified": 1653613980,
         "narHash": "sha256-PWG81Jfcyq21qCrjSsPNK9B9383O/6WmNwVVY9KuRYg=",
-        "owner": "hlissner",
-        "repo": "doom-emacs",
+        "owner": "doomemacs",
+        "repo": "doomemacs",
         "rev": "1b8f46c7c5893d63e4bcebc203c0d28df9f5981b",
         "type": "github"
       },
       "original": {
-        "owner": "hlissner",
+        "owner": "doomemacs",
         "ref": "master",
-        "repo": "doom-emacs",
+        "repo": "doomemacs",
         "type": "github"
       }
     },
@@ -22,14 +22,14 @@
       "locked": {
         "lastModified": 1651768501,
         "narHash": "sha256-55mHNFfn3N8k4aWgswX9buATsOhQTJ0L05UaUNNMgDg=",
-        "owner": "hlissner",
-        "repo": "doom-snippets",
+        "owner": "doomemacs",
+        "repo": "snippets",
         "rev": "f74b11b1e0fe8481e20f3065e355efe627e635de",
         "type": "github"
       },
       "original": {
-        "owner": "hlissner",
-        "repo": "doom-snippets",
+        "owner": "doomemacs",
+        "repo": "snippets",
         "type": "github"
       }
     },
