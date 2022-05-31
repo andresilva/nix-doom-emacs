@@ -13,7 +13,7 @@ if [[ $json == "[]" ]]; then
 fi
 echo "$json" | jq '.[] | .headRefName | @text' | xargs -L1 -- git pull origin --rebase
 if nix flake check; then
-    prs=$(echo "$json" | jq ".[] | .number | @text")
+    prs=$(echo "$json" | jq ".[] | .number")
     for pr in $prs; do
         sleep 5
         gh pr merge --squash --delete-branch "$pr"
