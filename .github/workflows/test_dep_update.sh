@@ -13,7 +13,11 @@ if [[ $json == "[]" ]]; then
 fi
 echo "$json" | jq '.[] | .headRefName | @text' | xargs -L1 -- git pull origin --rebase
 if nix flake check; then
-    echo "$json" | jq ".[] | .number | @text" | xargs -L1 -- gh pr merge --squash --delete-branch
+    prs=$(echo "$json" | jq ".[] | .number | @text")
+    for pr in $prs; do
+        sleep 5
+        gh pr merge --squash --delete-branch "$pr"
+    done
 else
     gh issue create \
         --title "Recent Dependency update PRs failing tests" \
